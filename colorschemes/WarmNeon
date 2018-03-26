@@ -1,0 +1,20 @@
+  echo -en "\033]Pgafdab6\033\\" # ColorForeground
+  echo -en "\033]Ph404040\033\\" # ColorBackground
+  echo -en "\033]Pl30ff24\033\\" # ColorCursor
+  echo -en "\033]P0000000\033\\" # ansi color 0
+  echo -en "\033]P1e24346\033\\" # ansi color 1
+  echo -en "\033]P239b13a\033\\" # ansi color 2
+  echo -en "\033]P3dae145\033\\" # ansi color 3
+  echo -en "\033]P44261c5\033\\" # ansi color 4
+  echo -en "\033]P5f920fb\033\\" # ansi color 5
+  echo -en "\033]P62abbd4\033\\" # ansi color 6
+  echo -en "\033]P7d0b8a3\033\\" # ansi color 7
+  echo -en "\033]P8fefcfc\033\\" # ansi color 8
+  echo -en "\033]P9e97071\033\\" # ansi color 9
+  echo -en "\033]Pa9cc090\033\\" # ansi color a
+  echo -en "\033]Pbddda7a\033\\" # ansi color b
+  echo -en "\033]Pc7b91d6\033\\" # ansi color c
+  echo -en "\033]Pdf674ba\033\\" # ansi color d
+  echo -en "\033]Pe5ed1e5\033\\" # ansi color e
+  echo -en "\033]Pfd8c8bb\033\\" # ansi color f
+
