@@ -15,7 +15,7 @@ _iterm2colors_default="Jackie Brown"
 # _iterm2colors_apply(${_iterm2colors_default})
 _iterm2colors_current=${_iterm2colors_default}
 
-function _iterm2colors_apply_random() {
+_iterm2colors_apply_random() {
   local presets
   local random_color_preset
   presets=(${_iterm2colors_defs_path}/*)
@@ -27,7 +27,7 @@ function _iterm2colors_apply_random() {
   fi
 }
 
-function _iterm2colors_apply () {
+_iterm2colors_apply () {
   # TODO: Move this check to the top; error out or do nothing if it's not iterm
   if [[ "$TERM_PROGRAM" = "iTerm.app" ]] && \
      [[ $_iterm2colors_current != "$*" ]]; then
@@ -35,11 +35,11 @@ function _iterm2colors_apply () {
   fi
 }
 
-function _iterm2colors_reapply() {
+_iterm2colors_reapply() {
   __iterm2colors_apply $_iterm2colors_current
 }
 
-function __iterm2colors_apply () {
+__iterm2colors_apply () {
   if [[ "$TERM_PROGRAM" = "iTerm.app" ]]; then
     if [[ -f "$_iterm2colors_defs_path/$*" ]]; then
       # echo "Applying theme $*";
