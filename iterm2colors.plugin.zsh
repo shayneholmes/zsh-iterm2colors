@@ -57,3 +57,21 @@ compdef '_files -W "$_iterm2colors_defs_path"' _iterm2colors_apply
 alias ac=_iterm2colors_apply
 alias acl='echo $_iterm2colors_current'
 alias acr=_iterm2colors_apply_random
+
+_iterm2colors_sample () {
+  presets=(${_iterm2colors_defs_path}/*)
+
+  IFS=$'\n'
+  for preset_path in "${presets[@]}"; do
+    preset=$(basename $preset_path)
+    printf "$preset"
+    _iterm2colors_apply $preset
+    read -s response
+    if [[ $response != "" ]]; then
+      echo $preset>> ~/color_scheme_favorites.txt
+    fi
+    printf "`printf "$preset" | tr -C "[:cntrl:]" \\\\b`" # move cursor back
+    printf "`printf "$preset" | tr -C "[:cntrl:]" " "`" # overwrite with spaces
+    printf "`printf "$preset" | tr -C "[:cntrl:]" \\\\b`" # move cursor back
+  done
+}
