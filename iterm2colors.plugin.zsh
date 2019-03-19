@@ -9,7 +9,7 @@
 
 _iterm2colors_defs_path=$(dirname $0)/colorschemes
 
-_iterm2colors_default="Jackie Brown"
+_iterm2colors_default="Dark Pastel"
 
 # uncomment to set the terminal color by default
 # _iterm2colors_apply(${_iterm2colors_default})
