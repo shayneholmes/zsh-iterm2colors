@@ -40,6 +40,9 @@ _iterm2colors_reapply() {
 }
 
 __iterm2colors_apply () {
+  # Don't apply colors on non-tty
+  if [ ! -t 1 ]; then return; fi
+
   if [[ "$TERM_PROGRAM" = "iTerm.app" ]]; then
     if [[ -f "$_iterm2colors_defs_path/$*" ]]; then
       # echo "Applying theme $*";
